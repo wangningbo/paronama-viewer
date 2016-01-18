@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>paronama view</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="@{'/public/javascripts/three.min.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/CSS3DRenderer.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/cube.js'}"></script>
+<style type="text/css">
+body{
+	overflow:hidden;
+	padding:0;
+	margin:0;
+}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		cube({
+			full : "@{img(path,'full')}",
+			left : "@{img(path,'left')}",
+			right : "@{img(path,'right')}",
+			front : "@{img(path,'front')}",
+			back : "@{img(path,'back')}",
+			top : "@{img(path,'top')}",
+			bottom : "@{img(path,'bottom')}"
+		});
+	</script>
+</body>
+</html>

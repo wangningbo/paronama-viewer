@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>home</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<form enctype="multipart/form-data" accept="image/png,image/jpeg,image/jpg" action="@{upload}" method="POST">
+		<input type="file" name="file" />
+		<input type="submit" name="上传" />
+	</form>
+	<ul>
+		#{list items:paths,as:'p'}
+		<li><a href="@{view(p)}">${p}</a></li>
+		#{/list}
+	</ul>
+</body>
+</html>
